@@ -3,11 +3,6 @@ var router = express.Router();
 var questions = require('../lib/questions');
 var permits = require('../lib/permits');
 
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
-
-// API
 router.get('/questions/:id', function(req, res, next) {
   if (questions[req.params.id]) {
     return res.json(questions[req.params.id]);
