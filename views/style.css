@@ -1,0 +1,120 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial';
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.5em;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.wizard {
+  padding: 0;
+}
+
+.wizard li {
+  background-color: #E4E4E4;
+  border-radius: 5px;
+  display: inline;
+  padding: 10px 30px 10px 40px;
+  margin-right: -7px;
+  width: auto;
+}
+
+.wizard li::before, .wizard li::after {
+  border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+  border-color: transparent;
+	border-left-color: #fff;
+  border-radius: 10px;
+}
+
+.wizard li::before {
+	border-width: 25px;
+  margin-top: -16px;
+  margin-left: 75px;
+}
+
+
+.wizard li::after {
+	border-left-color: #E4E4E4;
+  border-width: 21px;
+  margin-top: -12px;
+  margin-left: 24px;
+}
+
+.wizard li.selected {
+  background-color: #FF4F65;
+  color: #fff;
+}
+
+.wizard li.selected::after {
+  border-left-color: #FF4F65;
+}
+
+.wizard li:last-child::after {
+  border-left-color: transparent;
+}
+
+nav {
+  background-color: #fff;
+  padding: 20px 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul a {
+  text-decoration: none;
+  color: #a1561f;
+}
+
+nav ul a:hover {
+  color: #7b522c;
+}
+
+h1 {
+  font-family: 'Arial';
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.3em;
+}
+
+h2 {
+  font-family: 'Arial';
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.3em;
+}
+
+h3 {
+  font-family: 'Arial';
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.3em;
+}
+
+h5 {
+  font-family: 'Arial';
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.3em;
+}
+
+.jumbotron {
+  height: 250px;
+  background-color: grey;
+}
