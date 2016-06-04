@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var questions = require('../lib/questions');
 var permits = require('../lib/permits');
+var prereqs = require('../lib/prereqs');
 
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
@@ -21,5 +22,13 @@ router.get('/permits/:id', function(req, res, next) {
   }
   res.status(404).send('Permit not found');
 });
+
+router.get('/prereqs/:id', function(req, res, next) {
+  if (prereqs[req.params.id]) {
+    return res.json(prereqs[req.params.id]);
+  }
+  res.status(404).send('Permit not found');
+});
+
 
 module.exports = router;
