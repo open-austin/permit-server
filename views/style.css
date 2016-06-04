@@ -15,57 +15,6 @@ body {
   max-width: 600px;
 }
 
-.wizard {
-  padding: 0;
-}
-
-.wizard li {
-  background-color: #E4E4E4;
-  border-radius: 5px;
-  display: inline;
-  padding: 10px 30px 10px 40px;
-  margin-right: -7px;
-  width: auto;
-}
-
-.wizard li::before, .wizard li::after {
-  border: solid transparent;
-	content: " ";
-	height: 0;
-	width: 0;
-	position: absolute;
-  border-color: transparent;
-	border-left-color: #fff;
-  border-radius: 10px;
-}
-
-.wizard li::before {
-	border-width: 25px;
-  margin-top: -16px;
-  margin-left: 75px;
-}
-
-
-.wizard li::after {
-	border-left-color: #E4E4E4;
-  border-width: 21px;
-  margin-top: -12px;
-  margin-left: 24px;
-}
-
-.wizard li.selected {
-  background-color: #FF4F65;
-  color: #fff;
-}
-
-.wizard li.selected::after {
-  border-left-color: #FF4F65;
-}
-
-.wizard li:last-child::after {
-  border-left-color: transparent;
-}
-
 nav {
   background-color: #fff;
   padding: 20px 0;
@@ -117,4 +66,80 @@ h5 {
 .jumbotron {
   height: 250px;
   background-color: grey;
+}
+
+.permit-splash {
+  height: 200px;
+  background-color: grey;
+}
+
+/* Form Progress */
+.progress {
+  margin: 20px auto;
+  text-align: center;
+}
+.progress .circle,
+.progress .bar {
+  display: inline-block;
+  background: #fff;
+  width: 40px; height: 40px;
+  border-radius: 40px;
+  border: 1px solid #d5d5da;
+}
+.progress .bar {
+  position: relative;
+  width: 80px;
+  height: 6px;
+  top: -33px;
+  margin-left: -5px;
+  margin-right: -5px;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+}
+.progress .circle .label {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 32px;
+  margin-top: 3px;
+  color: #b5b5ba;
+  font-size: 17px;
+}
+.progress .circle .title {
+  color: #b5b5ba;
+  font-size: 13px;
+  line-height: 30px;
+  margin-left: -5px;
+}
+
+/* Done / Active */
+.progress .bar.done,
+.progress .circle.done {
+  background: #eee;
+}
+.progress .bar.active {
+  background: linear-gradient(to right, #EEE 40%, #FFF 60%);
+}
+
+.progress .circle .label {
+  margin-top: 4px;
+}
+
+.progress .circle.done .label {
+  color: #FFF;
+  background: #8bc435;
+  box-shadow: inset 0 0 2px rgba(0,0,0,.2);
+}
+.progress .circle.done .title {
+  color: #444;
+}
+.progress .circle.active .label {
+  color: #FFF;
+  background: #0c95be;
+  box-shadow: inset 0 0 2px rgba(0,0,0,.2);
+}
+.progress .circle.active .title {
+  color: #0c95be;
 }
