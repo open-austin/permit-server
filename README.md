@@ -6,7 +6,6 @@ npm install
 npm start
 ```
 
-api
-
+The server will run on http://localhost:3000/
 * `/questions/:id`
 * `/permits/:id`
