@@ -1,6 +1,7 @@
 var $question = $('#question');
 var $answers = $('#answers');
 var $back = $('#back');
+var $caption = $('#caption');
 var $permit = $('#permit');
 
 var current;
@@ -10,20 +11,21 @@ var actions = [];
 function renderPermit() {
   // Reset
   $question.html('');
+  $caption.html('');
   $answers.html('');
   $back.html('');
 
+
   $.get('/permits/' + current.permitId)
     .then(function(permit) {
-      console.log(permit);
-      var markup = '<h3>' + permit.title + '</h3>';
+      var markup = '<div class="inner-container"><h3>' + permit.title + '</h3>';
       markup += '<p>' + permit.description + '</p>';
       markup += '<h3>Take care of the below items before submitting application:</h3>';
       markup += checklist.map(function(prereq) {
-        return '<p><input type="checkbox"></input><label>' + prereq +'</p>';
+        return '<p><label><input type="checkbox"></input>' + prereq +'<label></p>';
       }).join('');
       markup += '<h3>Next steps:</h3>';
-      markup += '<p><a target="_blank" href="' + permit.pdf + '"><button>Download your Express Application</button></a></p>';
+      markup += '<p><a target="_blank" href="' + permit.pdf + '"><button class="button full-width">Download your Express Application</button></a></p></div>';
 
 
       $permit.html(markup);
@@ -57,7 +59,13 @@ function render(data) {
   }
 
   // Question
-  $question.html(current.text);
+  $question.html('<h3>' + current.text + '</h3>');
+
+  // Caption
+  if (current.caption)
+    $caption.html(current.caption);
+  else
+    $caption.html('');
 
   // Answers
   var answers = Object.keys(current.answers).map(renderAnswer);
@@ -68,7 +76,7 @@ function render(data) {
 
   // Back Button
   if (actions.length) {
-    var $backBtn = $('<button>Back</button>');
+    var $backBtn = $('<button class="back-button">Back</button>');
     $backBtn.click(function() {
       var previous = actions.pop();
 
@@ -86,8 +94,9 @@ function render(data) {
 }
 
 function renderFailure() {
-  $question.html("We're sorry, this type of permit is not available yet. Please call xxx-xxx-xxxx or visit foo.com");
+  $question.html('<h3>We\'re sorry, this type of permit is not available yet.<br/>Please call 512-978-4000 or visit <a href="http://www.austintexas.gov/department/development-services">Development Services</a></h3>');
   $answers.html('');
+  $caption.html('');
 }
 
 function getQuestion(id) {

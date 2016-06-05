@@ -1,3 +1,7 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -14,6 +18,7 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  color: #444;
 }
 
 .site-content {
@@ -42,6 +47,7 @@ nav ul {
 nav ul a {
   text-decoration: none;
   color: #a1561f;
+  border-bottom: 1px dotted #a1561f;
 }
 
 nav ul a:hover {
@@ -89,10 +95,10 @@ h5 {
   background-image: url('shutterstock_389596906_op_overlay.png');
 =======
   height: 250px;
-  background-image: url('shutterstock_389596906_op.jpg');
+  background-image: url('shutterstock_389596906_op_overlay.png');
 >>>>>>> Add caption
   background-size: cover;
-  text-shadow: 1px 1px 1px #000000;
+  text-shadow: 1px 1px 3px #444;
   color:#ffffff;
   margin-bottom: 30px;
   text-align: center;
@@ -101,8 +107,6 @@ h5 {
   justify-content: center;
   align-items: center;
 
-  /* to gray out the image */
-  -webkit-filter: grayscale(80%)
 }
 .jumbotron-content {
   width: 900px;
@@ -111,11 +115,15 @@ h5 {
 
 .permit-splash {
   padding-bottom: 25px;
-  background-color: #eee;
+  background-color: #f7f7f7;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.permit-splash h3{
+    text-transform: capitalize;
 }
 
 .permit-splash .permit-button {
@@ -127,11 +135,48 @@ h5 {
   align-items: center;
   color: white;
   text-decoration: none !important;
+  border-bottom: 5px solid #29586f;
+  text-transform: capitalize;
 }
-
+.permit-splash .permit-button:hover {
+  background-color: #29586f;
+}
 
 .permit-splash .permit-button a ul {
   text-decoration: none;
+}
+
+/* Bottom section */
+.QuickLink{
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 75px;
+  margin-bottom: 75px;
+}
+.QuickLink div{
+  display: inline-block;
+  width: 250px;
+  vertical-align: top;
+  margin-right: 50px;
+  color: #444;
+}
+
+.icon{
+  background-size: contain;
+  background-repeat:no-repeat;
+  background-position: center;
+  height: 100px;
+  width: 150px;
+
+}
+.app{
+    background-image: url('app.png');
+}
+.status{
+    background-image: url('status.png');
+}
+.pay{
+    background-image: url('pay.png');
 }
 
 /* Form Progress */
@@ -207,11 +252,18 @@ h5 {
 }
 
 .footer {
-    margin-top: 2em;
-    background-color:lightgrey;
+    margin-top: 4em;
     width:100%;
     text-align:center;
+    background-color: #366D88;
+    color: white;
 }
+.footer a{
+    color: white;
+    border-bottom: 1px dotted white;
+}
+
+
 .contact {
     display:inline-block;
     vertical-align:top;
@@ -221,6 +273,7 @@ h5 {
 .contact > ul  {
     list-style:none;
     text-align: left;
+    padding: 0;
 }
 
 
@@ -230,9 +283,62 @@ h5 {
     }
 
 
-.wizard-button{
+/* Wizard page styling here */
+
+.wizard-button,
+.button {
   height: 50px;
-  width: 100px;
+  width: 175px;
+  background-color: #366D88;
   margin-right: 25px;
   margin-top: 50px;
+  border: 1px solid grey;
+  border-bottom: 5px solid #29586f;
+  font-size: 18px;
+  color:white;
+  cursor: pointer;
+}
+
+.wizard-button:hover,
+.button:hover {
+  background-color: #29586f;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.back-button {
+    width: 100px;
+    height: 50px;
+    margin-top: 75px;
+    background-color: white;
+    border: 1px solid grey;
+    border-bottom: 3px solid grey;
+    cursor: pointer;
+    font-size:17px;
+    color: grey;
+}
+.back-button:hover {
+  border-bottom: 1px solid grey;
+  color:grey;
+}
+
+.centered {
+  text-align: center;
+}
+
+#question{
+  margin-top: 75px;
+}
+
+.inner-container {
+  max-width: 600px;
+  text-align: left;
+  margin: 0 auto;
+}
+
+.horizontal-spaced {
+  display: flex;
+  justify-content: space-between;
 }
