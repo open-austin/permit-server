@@ -2,6 +2,9 @@ html, body {
   margin: 0;
   padding: 0;
 }
+a{
+  text-decoration: none;
+}
 
 body {
   font-family: 'Arial';
@@ -62,7 +65,7 @@ h1 {
 h2 {
   font-family: 'Arial';
   font-weight: 700;
-  font-size: 30px;
+  font-size: 52px;
   line-height: 1.3em;
 }
 
@@ -81,7 +84,6 @@ h5 {
 }
 
 .jumbotron {
-  height: 250px;
   background-image: url('shutterstock_389596906_op_overlay.png');
   background-size: cover;
   text-shadow: 1px 1px 1px #000000;
@@ -94,10 +96,14 @@ h5 {
   align-items: center;
 
 }
+.jumbotron-content {
+  width: 900px;
+  margin-bottom: 30px;
+}
 
 .permit-splash {
-  height: 120px;
-  background-color: #6A889F;
+  padding-bottom: 25px;
+  background-color: #eee;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -105,13 +111,14 @@ h5 {
 }
 
 .permit-splash .permit-button {
-  height: 40px;
+  height: 50px;
   background-color: #366D88;
   margin: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fffffff;
+  color: white;
+  text-decoration: none !important;
 }
 
 
@@ -213,3 +220,11 @@ h5 {
 .contact > ul li a {
     text-decoration:none;
     }
+
+
+.wizard-button{
+  height: 50px;
+  width: 100px;
+  margin-right: 25px;
+  margin-top: 50px;
+}

@@ -31,7 +31,7 @@ function renderPermit() {
 }
 
 function renderAnswer(text) {
-  var $answer = $('<button>' + text + '</button>');
+  var $answer = $('<button class="wizard-button">' + text + '</button>');
   $answer.click(function() {
     var id = current.answers[text].next;
     current.selected = text;
