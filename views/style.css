@@ -8,6 +8,13 @@ body {
   font-weight: 400;
   font-size: 17px;
   line-height: 1.5em;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
 }
 
 .container {
@@ -75,7 +82,7 @@ h5 {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   /* to gray out the image */
   -webkit-filter: grayscale(80%)
 }
@@ -177,11 +184,12 @@ h5 {
 }
 
 .footer {
+    margin-top: 2em;
     background-color:lightgrey;
     width:100%;
     text-align:center;
-    
-    
+
+
     }
 .contact {
     display:inline-block;
@@ -194,10 +202,8 @@ h5 {
     text-align: left;
 }
 
-    
-    
+
+
 .contact > ul li a {
     text-decoration:none;
     }
-    
-    
