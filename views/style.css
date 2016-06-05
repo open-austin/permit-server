@@ -147,8 +147,9 @@ h5 {
 .QuickLink{
   text-align: center;
   margin: 0 auto;
-  margin-top: 75px;
   margin-bottom: 75px;
+  max-width: 950px;
+  min-width: 350px;
 }
 .QuickLink div{
   display: inline-block;
@@ -159,28 +160,44 @@ h5 {
   color: #444;
 }
 
-.icon{
+.icon svg{
   background-size: contain;
   background-repeat:no-repeat;
   background-position: center;
   height: 100px;
   width: 150px;
+  margin-top: 75px !important;
 
 }
 .app{
-    background-image: url('app.png');
+    fill: #669940;
+}
+.app:hover{
+    fill: #5d7f40;
 }
 .status{
-    background-image: url('status.png');
+    fill: #13436b;
+}
+.status:hover{
+    fill: #153347;
 }
 .pay{
-    background-image: url('pay.png');
+    fill: #636c76;
+}
+.pay:hover{
+    fill: #454a4f;
 }
 .faq{
-    background-image: url('faq.png');
+    fill: #a6592c;
+}
+.faq:hover{
+    fill: #7f482d;
 }
 .building{
-    background-image: url('building.png');
+    fill: #664c2d;
+}
+.building:hover{
+    fill: #473829;
 }
 
 /* Form Progress */
