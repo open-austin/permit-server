@@ -49,7 +49,7 @@ function render(data) {
         checklist.splice(checklistIdx, 1);
       }
 
-      render(actions.pop());
+      render(previous);
     });
     $back.html($backBtn);
   } else {
