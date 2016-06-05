@@ -85,7 +85,12 @@ h5 {
 }
 
 .jumbotron {
+<<<<<<< dbe5b2b5f45decf43b44f4f59bddfd76358bb2ee
   background-image: url('shutterstock_389596906_op_overlay.png');
+=======
+  height: 250px;
+  background-image: url('shutterstock_389596906_op.jpg');
+>>>>>>> Add caption
   background-size: cover;
   text-shadow: 1px 1px 1px #000000;
   color:#ffffff;
@@ -96,6 +101,8 @@ h5 {
   justify-content: center;
   align-items: center;
 
+  /* to gray out the image */
+  -webkit-filter: grayscale(80%)
 }
 .jumbotron-content {
   width: 900px;
@@ -215,6 +222,8 @@ h5 {
     list-style:none;
     text-align: left;
 }
+
+
 
 .contact > ul li a {
     text-decoration:none;
