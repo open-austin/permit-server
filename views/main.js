@@ -68,7 +68,7 @@ function render(data) {
 
   // Back Button
   if (actions.length) {
-    var $backBtn = $('<button>Back</button>');
+    var $backBtn = $('<button class="back-button">Back</button>');
     $backBtn.click(function() {
       var previous = actions.pop();
 
