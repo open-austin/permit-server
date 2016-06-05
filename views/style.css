@@ -143,3 +143,29 @@ h5 {
 .progress .circle.active .title {
   color: #0c95be;
 }
+
+.footer {
+    background-color:lightgrey;
+    width:100%;
+    text-align:center;
+    
+    
+    }
+.contact {
+    display:inline-block;
+    vertical-align:top;
+    margin-top:15px;
+    margin-bottom:15px;
+    }
+.contact > ul  {
+    list-style:none;
+    text-align: left;
+}
+
+    
+    
+.contact > ul li a {
+    text-decoration:none;
+    }
+    
+    
