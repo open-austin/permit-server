@@ -311,13 +311,17 @@ h5 {
   height: 50px;
   width: 175px;
   background-color: #366D88;
-  margin-right: 25px;
   margin-top: 50px;
   border: 1px solid grey;
   border-bottom: 5px solid #29586f;
   font-size: 18px;
   color:white;
   cursor: pointer;
+}
+
+.wizard-button + .wizard-button,
+.button + .button {
+  margin-left: 25px;
 }
 
 .wizard-button:hover,
