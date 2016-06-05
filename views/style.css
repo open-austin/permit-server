@@ -83,7 +83,7 @@ h5 {
 
 .jumbotron {
   height: 250px;
-  background-image: url('shutterstock_389596906_op.jpg');
+  background-image: url('shutterstock_389596906_op_overlay.png');
   background-size: cover;
   text-shadow: 1px 1px 1px #000000;
   color:#ffffff;
@@ -94,8 +94,6 @@ h5 {
   justify-content: center;
   align-items: center;
 
-  /* to gray out the image */
-  -webkit-filter: grayscale(80%)
 }
 
 .permit-splash {
