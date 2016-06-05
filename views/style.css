@@ -8,7 +8,6 @@ body {
   font-weight: 400;
   font-size: 17px;
   line-height: 1.5em;
-  display: flex;
   min-height: 100vh;
   flex-direction: column;
 }
@@ -197,9 +196,9 @@ h5 {
     background-color:lightgrey;
     width:100%;
     text-align:center;
-
-
-    }
+    position: absolute;
+    bottom: 0;
+}
 .contact {
     display:inline-block;
     vertical-align:top;
