@@ -1,10 +1,34 @@
 var $question = $('#question');
 var $answers = $('#answers');
 var $back = $('#back');
+var $permit = $('#permit');
 
 var current;
 var checklist = [];
 var actions = [];
+
+function renderPermit() {
+  // Reset
+  $question.html('');
+  $answers.html('');
+  $back.html('');
+
+  $.get('/permits/' + current.permitId)
+    .then(function(permit) {
+      console.log(permit);
+      var markup = '<h3>' + permit.title + '</h3>';
+      markup += '<p>' + permit.description + '</p>';
+      markup += '<h3>Take care of the below items before submitting application:</h3>';
+      markup += checklist.map(function(prereq) {
+        return '<p><input type="checkbox"></input><label>' + prereq +'</p>';
+      }).join('');
+      markup += '<h3>Next steps:</h3>';
+      markup += '<p><a target="_blank" href="' + permit.pdf + '"><button>Download your Express Application</button></a></p>';
+
+
+      $permit.html(markup);
+    });
+}
 
 function renderAnswer(text) {
   var $answer = $('<button>' + text + '</button>');
@@ -27,6 +51,10 @@ function render(data) {
   current = data;
 
   // TODO Check if there is a permid id to lookup
+  if (current.permitId) {
+    renderPermit();
+    return;
+  }
 
   // Question
   $question.html(current.text);
