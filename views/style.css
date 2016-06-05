@@ -312,6 +312,10 @@ h5 {
   width: 100%;
 }
 
+.width-40 {
+  width: 40%;
+}
+
 .back-button {
     width: 100px;
     height: 50px;
