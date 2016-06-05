@@ -57,7 +57,7 @@ function render(data) {
   }
 
   // Question
-  $question.html(current.text);
+  $question.html('<h3>' + current.text + '</h3>');
 
   // Answers
   var answers = Object.keys(current.answers).map(renderAnswer);
