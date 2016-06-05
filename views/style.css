@@ -65,12 +65,43 @@ h5 {
 
 .jumbotron {
   height: 250px;
-  background-color: grey;
+  background-image: url('shutterstock_389596906_op.jpg');
+  background-size: cover;
+  text-shadow: 1px 1px 1px #000000;
+  color:#ffffff;
+  margin: 30px;
+  text-align: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* to gray out the image */
+  -webkit-filter: grayscale(80%)
 }
 
 .permit-splash {
-  height: 200px;
-  background-color: grey;
+  height: 120px;
+  background-color: #6A889F;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.permit-splash .permit-button {
+  height: 40px;
+  background-color: #366D88;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fffffff;
+}
+
+
+.permit-splash .permit-button a ul {
+  text-decoration: none;
 }
 
 /* Form Progress */
@@ -111,7 +142,8 @@ h5 {
   color: #b5b5ba;
   font-size: 13px;
   line-height: 30px;
-  margin-left: -5px;
+  margin-left: -15px;
+  text-align: center;
 }
 
 /* Done / Active */
