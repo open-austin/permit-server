@@ -10,6 +10,10 @@ router.get('/questions/:id', function(req, res, next) {
   res.status(404).send('Question not found');
 });
 
+router.get('/questions/', function (req, res, next) {
+    return res.json(questions);
+});
+
 router.get('/permits/:id', function(req, res, next) {
   if (permits[req.params.id]) {
     return res.json(permits[req.params.id]);
