@@ -2,7 +2,6 @@ var express = require('express');
 var router = express.Router();
 var questions = require('../lib/questions');
 var permits = require('../lib/permits');
-var prereqs = require('../lib/prereqs');
 
 router.get('/questions/:id', function(req, res, next) {
   if (questions[req.params.id]) {
