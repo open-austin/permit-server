@@ -25,6 +25,7 @@ function renderPermit() {
         return '<p><label><input type="checkbox"></input>' + prereq +'<label></p>';
       }).join('');
       markup += '<h3>Next steps:</h3>';
+	  markup += '<p>' + permit.nextStepsDescription + '</p>';
       markup += '<p><a target="_blank" href="' + permit.pdf + '"><button class="button full-width">Download your Express Application</button></a></p></div>';
 
 
