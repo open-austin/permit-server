@@ -57,7 +57,7 @@ function render(data) {
   }
 
   // Question
-  $question.html(current.text);
+  $question.html('<h3>' + current.text + '</h3>');
 
   // Answers
   var answers = Object.keys(current.answers).map(renderAnswer);
@@ -68,7 +68,7 @@ function render(data) {
 
   // Back Button
   if (actions.length) {
-    var $backBtn = $('<button>Back</button>');
+    var $backBtn = $('<button class="back-button">Back</button>');
     $backBtn.click(function() {
       var previous = actions.pop();
 
