@@ -172,7 +172,7 @@ h5 {
 .app{
     fill: #669940;
 }
-.app:hover{
+.icon.app:hover{
     fill: #5d7f40;
 }
 .status{
