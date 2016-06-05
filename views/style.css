@@ -19,7 +19,7 @@ main {
 
 .container {
   margin: 0 auto;
-  max-width: 600px;
+  max-width: 900px;
 }
 
 nav {
@@ -31,6 +31,9 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: inline-block;
+  float: right;
+  padding-top: 15px;
 }
 
 nav ul a {
@@ -40,6 +43,14 @@ nav ul a {
 
 nav ul a:hover {
   color: #7b522c;
+}
+
+.logo{
+  background-image: url("logo.png");
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 200px;
+  display: inline-block;
 }
 
 h1 {
@@ -76,7 +87,7 @@ h5 {
   background-size: cover;
   text-shadow: 1px 1px 1px #000000;
   color:#ffffff;
-  margin: 30px;
+  margin-bottom: 30px;
   text-align: center;
   background-size: cover;
   display: flex;
