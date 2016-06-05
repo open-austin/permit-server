@@ -280,7 +280,8 @@ h5 {
 
 /* Wizard page styling here */
 
-.wizard-button{
+.wizard-button,
+.button {
   height: 50px;
   width: 175px;
   background-color: #366D88;
@@ -293,9 +294,15 @@ h5 {
   cursor: pointer;
 }
 
-.wizard-button:hover {
+.wizard-button:hover,
+.button:hover {
   background-color: #29586f;
 }
+
+.full-width {
+  width: 100%;
+}
+
 .back-button {
     width: 100px;
     height: 50px;
@@ -319,4 +326,10 @@ h5 {
 
 #question{
   margin-top: 75px;
+}
+
+.inner-container {
+  max-width: 600px;
+  text-align: left;
+  margin: 0 auto;
 }
