@@ -22,7 +22,7 @@ function renderPermit() {
       markup += '<p>' + permit.description + '</p>';
       markup += '<h3>Take care of the below items before submitting application:</h3>';
       markup += checklist.map(function(prereq) {
-        return '<p><input type="checkbox"></input><label>' + prereq +'</p>';
+        return '<p><label><input type="checkbox"></input>' + prereq +'<label></p>';
       }).join('');
       markup += '<h3>Next steps:</h3>';
       markup += '<p><a target="_blank" href="' + permit.pdf + '"><button class="button full-width">Download your Express Application</button></a></p></div>';
