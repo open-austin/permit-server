@@ -18,7 +18,7 @@ Inception
 This project was pitched and started at ATX Hack for Change 2016
 The contributors are as follows: 
 
-Project Champion | Julia Robbins | 
+Project Champion | Julia Robbins | Julia.robbins@austintexas.gov
 
 Michelle Armstrong | mimi314159@gmail.com
 
@@ -30,7 +30,7 @@ Victoria O'Dell | victoria.d.odell@Gmail.com
 
 Preston Pham | prestonp08@gmail.com
 
-Athena Petro | 
+Athena Petropoulos | athenapetro@yahoo.com
 
 
 
