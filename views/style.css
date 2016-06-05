@@ -91,12 +91,8 @@ h5 {
 }
 
 .jumbotron {
-<<<<<<< dbe5b2b5f45decf43b44f4f59bddfd76358bb2ee
+  /*height: 250px;*/
   background-image: url('shutterstock_389596906_op_overlay.png');
-=======
-  height: 250px;
-  background-image: url('shutterstock_389596906_op_overlay.png');
->>>>>>> Add caption
   background-size: cover;
   text-shadow: 1px 1px 3px #444;
   color:#ffffff;
@@ -147,6 +143,7 @@ h5 {
 }
 
 /* Bottom section */
+
 .QuickLink{
   text-align: center;
   margin: 0 auto;
@@ -156,6 +153,7 @@ h5 {
 .QuickLink div{
   display: inline-block;
   width: 250px;
+  margin-top: 10px;
   vertical-align: top;
   margin-right: 50px;
   color: #444;
@@ -177,6 +175,12 @@ h5 {
 }
 .pay{
     background-image: url('pay.png');
+}
+.faq{
+    background-image: url('faq.png');
+}
+.building{
+    background-image: url('building.png');
 }
 
 /* Form Progress */
