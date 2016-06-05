@@ -26,8 +26,10 @@ function renderPermit() {
       }).join('');
       markup += '<h3>Next steps:</h3>';
       markup += '<p><a target="_blank" href="' + permit.pdf + '"><button class="button full-width">Download your Express Application</button></a></p></div>';
-	markup += '<p><a target="_blank" href="mailto:pdrdexpresspermits@austintexas.gov"><button class="button width-40">Email your application</button></a> or <a target="_blank" href="http://i.imgur.com/in5fkg1.png"><button class="button width-40">Visit the Permit Center</button></a></p></div>';
-      $permit.html(markup);
+	  markup += '<br><h5>Email or Visit the permit center in person</h5>';
+	  markup += '<p><a target="_blank" href="mailto:pdrdexpresspermits@austintexas.gov"><button class="button width-40">Email your application</button></a> or <a target="_blank" href="http://i.imgur.com/in5fkg1.png"><button class="button width-40">Visit the Permit Center</button></a></p></div>';
+	  markup += '<br><h5>After receiving a confirmation email (which may take 3-5 business days), you may pay for your permit online (instructions will be in confirmation email).</h5></div>';
+	  $permit.html(markup);
     });
 }
 
