@@ -94,8 +94,9 @@ function render(data) {
 }
 
 function renderFailure() {
-  $question.html("We're sorry, this type of permit is not available yet. Please call xxx-xxx-xxxx or visit foo.com");
+  $question.html('<h3>We\'re sorry, this type of permit is not available yet.<br/>Please call 512-978-4000 or visit <a href="http://www.austintexas.gov/department/development-services">Development Services</a></h3>');
   $answers.html('');
+  $caption.html('');
 }
 
 function getQuestion(id) {
