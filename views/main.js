@@ -22,7 +22,6 @@ function setProgressState(id) {
         }
     }
     function setCircleState(state, circleId) {
-        debugger;
         if (circleId) {
             this.circle = $progressBar.find("#progress-" + circleId);
             this.circle.removeClass("done");
