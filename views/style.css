@@ -225,6 +225,12 @@ h5 {
 .wizard-button{
   height: 50px;
   width: 100px;
+  background-color: white;
   margin-right: 25px;
   margin-top: 50px;
+  border: 1px solid grey;
+}
+
+.centered {
+  text-align: center;
 }
