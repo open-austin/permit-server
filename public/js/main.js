@@ -1,4 +1,6 @@
-﻿var $question = $('#question');
+require('../less/main.less');
+
+var $question = $('#question');
 var $answers = $('#answers');
 var $back = $('#back');
 var $caption = $('#caption');
