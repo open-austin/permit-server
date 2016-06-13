@@ -29,7 +29,20 @@ body {
   margin: 0 auto;
   max-width: 900px;
 }
-
+.prototype {
+  text-align: center;
+  margin: 0 auto;
+  color: white;
+  background-color: black;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.prototype a {
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: underline; 
+}
 nav {
   background-color: #fff;
   padding: 20px 0;
