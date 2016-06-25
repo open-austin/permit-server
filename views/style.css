@@ -384,3 +384,29 @@ h5 {
   display: flex;
   justify-content: space-between;
 }
+
+.tooltip{
+    display:inline;
+    position:relative;
+  }
+.tooltip:hover{text-decoration:none}
+
+.tooltip:active:after{
+   background:#111;
+   border-radius:5px;
+   bottom:18px;
+   color:#fff;
+   content:attr(title);
+   display:block;
+   font-size: 10px;
+   max-width: 200px;
+   padding:5px 15px;
+   position:absolute;
+   z-index:98
+  }
+.tooltip:active:before{
+    content:"";
+    display:block;
+    position:absolute;
+    z-index:99
+   }
