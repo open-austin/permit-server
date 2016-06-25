@@ -132,28 +132,35 @@ function render(data) {
     $answers.html('');
 
   // Back Button
-  if (actions.length) {
-    var $backBtn = $('<button class="back-button">Back</button>');
-    $backBtn.click(function() {
-      var previous = actions.pop();
-
-      var checklistIdx = checklist.indexOf(previous.checklist);
-      if (checklistIdx >= 0) {
-        checklist.splice(checklistIdx, 1);
-      }
-
-      render(previous);
-    });
+    if (actions.length) {
+	var $backBtn = createBackButton();
     $back.html($backBtn);
   } else {
     $back.html('');
   }
 }
 
+function createBackButton() {
+  var $backBtn = $('<button class="back-button">Back</button>');
+  $backBtn.click(function() {
+    var previous = actions.pop();
+
+    var checklistIdx = checklist.indexOf(previous.checklist);
+    if (checklistIdx >= 0) {
+      checklist.splice(checklistIdx, 1);
+    }
+
+    render(previous);
+  });
+  return $backBtn;
+}
+
 function renderFailure() {
   $question.html('<h3>We\'re sorry, this type of permit is not available yet.<br/>Please call 512-978-4000 or visit <a href="http://www.austintexas.gov/department/development-services">Development Services</a></h3>');
   $answers.html('');
   $caption.html('');
+  var $backBtn = createBackButton();
+  $back.html($backBtn);
 }
 
 function getQuestion(id) {
