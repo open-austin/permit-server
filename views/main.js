@@ -124,6 +124,17 @@ function render(data) {
   else
     $caption.html('');
 
+  if (current.tooltip) {
+    var tooltip = current.tooltip;
+    $('#question').append(tooltip);
+    $('.tip-content').hide();
+
+    $('.tooltip').click(function(){
+      $('.tip-content').toggle();
+    });
+  }
+
+
   // Answers
   var answers = Object.keys(current.answers).map(renderAnswer);
   if (answers.length)

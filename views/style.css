@@ -41,7 +41,7 @@ body {
   color: white;
   font-weight: bold;
   text-transform: uppercase;
-  text-decoration: underline; 
+  text-decoration: underline;
 }
 nav {
   background-color: #fff;
@@ -385,7 +385,7 @@ h5 {
   justify-content: space-between;
 }
 
-.tooltip{
+/*.tooltip{
     display:inline;
     position:relative;
   }
@@ -409,4 +409,4 @@ h5 {
     display:block;
     position:absolute;
     z-index:99
-   }
+   }*/
