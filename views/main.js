@@ -3,55 +3,10 @@ var $answers = $('#answers');
 var $back = $('#back');
 var $caption = $('#caption');
 var $permit = $('#permit');
-var $progressBar = $('#progress');
 
 var current;
 var checklist = [];
 var actions = [];
-
-function setProgressState(id) {
-    var circle = $progressBar.find("#progress-" + id);
-    var label = circle.find("span.label");
-    var title = circle.find(".title");
-    function setLabel(text,circleId) {
-        if (circleId) {
-            this.circle = $progressBar.find("#progress-" + circleId);
-            this.circle.find("span.label").html(text);
-        } else {
-            label.html(text);
-        }
-    }
-    function setCircleState(state, circleId) {
-        if (circleId) {
-            this.circle = $progressBar.find("#progress-" + circleId);
-            this.circle.removeClass("done");
-            this.circle.removeClass("active");
-            this.circle.addClass(state);
-        } else {
-            circle.removeClass("done");
-            circle.removeClass("active");
-            circle.addClass(state);
-        }
-    }
-    if (id == 1) {
-        setCircleState("active");
-    }
-    if (id === 2) {
-        setCircleState("active");
-        setCircleState("done", 1);
-        setLabel("&#10003;", 1);
-    }
-    if (id === 3) {
-        setCircleState("active");
-        setCircleState("done", 2);
-        setLabel("&#10003;", 2);
-    }
-    if (id === 4) {
-        setCircleState("active");
-        setCircleState("done", 3);
-        setLabel("&#10003;", 3);
-    }
-}
 
 function renderPermit() {
   // Reset
@@ -59,7 +14,6 @@ function renderPermit() {
   $caption.html('');
   $answers.html('');
   $back.html('');
-    setProgressState(4);
 
   $.get('/permits/' + current.permitId)
     .then(function(permit) {
@@ -103,17 +57,6 @@ function render(data) {
     renderPermit();
     return;
   }
-
-    // Progress bar
-    if (actions.length < 1) {
-        setProgressState(1);
-    }
-    if (current.permitFound) {
-        setProgressState(3);
-    }
-    if (actions.length === 1) {
-        setProgressState(2);
-    }
 
   // Question
   $question.html('<h3>' + current.text + '</h3>');
