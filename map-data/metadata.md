@@ -1,5 +1,3 @@
-hello world!
-
 ### Airport Zoning Overlay (airport_zoning_overlay.geo.json)
 
 - Source: City of Austin
