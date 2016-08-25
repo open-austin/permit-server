@@ -36,9 +36,20 @@ router.get('/api/zones', function(req, res, next) {
 
   geo.getAddressCandidates(req.query.address, function(err, response) {
     if (err) return next(err);
+
+    // Can't geolocate
+    if (!response.candidates.length) {
+      return res.json({
+        address: req.query.address,
+        location: null,
+        historic_district: null
+      });
+    }
+
+    // Use most likely location for now
     geo.inHistoricalDistrict(response.candidates[0].location, function(err, isInHistoricalDistrict) {
       if (err) return next(err);
-      res.json({
+      return res.json({
         address: req.query.address,
         location: response.candidates[0].location,
         historic_district: isInHistoricalDistrict
