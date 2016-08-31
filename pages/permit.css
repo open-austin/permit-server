@@ -1,0 +1,57 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+nav {
+  margin: 2em 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li + li {
+  margin-left: 1em;
+}
+
+nav ul li > a {
+  color: #666;
+  text-decoration: none;
+  transition: color .1s ease-in-out;
+}
+
+nav ul li > a:hover {
+  color: #333;
+}
+
+.btn {
+  min-width: 200px;
+  padding: 1em 2em;
+  background-color: #666;
+  border-radius: 3px;
+  border: none;
+  color: #fff;
+  transition: background-color .1s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #333;
+  cursor: pointer;
+}
