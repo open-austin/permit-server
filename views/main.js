@@ -68,15 +68,23 @@ function render(data) {
     $caption.html('');
 
   if (current.tooltip) {
-    var tooltip = current.tooltip;
-    $('#question').append(tooltip);
-    $('.tip-content').hide();
+    var tooltip = '<div id="myModal" class="modal"><div class="modal-content"><div class="modal-header">Structural Members<span class="close">&times</span></div><div class="modal-body">' + current.tooltip + '</div></div></div>';
 
-    $('.tooltip').click(function(){
-      $('.tip-content').toggle();
-    });
+    $question.append(tooltip);
+    var modal = document.getElementById('myModal');
+    var showtip = document.getElementById('showtip');
+    var span = document.getElementsByClassName('close')[0];
+
+    // When the user clicks the button, open the modal
+    showtip.onclick = function() {
+      modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
   }
-
 
   // Answers
   var answers = Object.keys(current.answers).map(renderAnswer);
